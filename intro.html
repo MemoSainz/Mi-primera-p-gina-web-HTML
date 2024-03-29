@@ -1,0 +1,224 @@
+
+                <!--     >>> etiquetas sin otra "etiqueta de cierre"      -->
+                <!--           <hr>             <br>           -->
+
+  
+                <!--     >>> etiquetas sencillas solo "de cierre"  -->
+                <!--           <img />          <input />      -->
+
+
+                
+
+<!DOCTYPE html>  <!-- sin esto, está en Quirks mode -->
+<html lang="en">
+<head>                                                                              <!-- 
+                    características no necesariamente 
+                    visibles al usuario                                             -->
+       <title>Mi primera web</title>
+</head>
+<body style="text-align: center; justify-content: center; align-items: center; ">
+
+                                <!--       >>> Headers        -->
+
+            <!-- contenido de nuestra web -->
+
+    <!-- c/ identación de 4 espacios o TAB antes de la línea -->    
+    <h1>Mi primer heading</h1>
+    <h2>Mi segundo heading</h2>
+    <h3>3er heading</h3>
+    <h4>4to</h4>
+    <h5>5to</h5>
+    <h6>león feliz</h6>
+    <h7>h7 no existe</h7>
+
+                                <!--       >>> Párrafos        -->
+
+    <p>El león dentro de un párrafo
+        lalala <!-- no se puede ver en otro párrafo, se necesita agregar otra etiqueta de "<p>"-->
+    </p>
+    <p>el león en otro párrafo</p>
+    
+                                <!--    >>> Barra separadora  -->
+
+    <hr> <!-- no necesita una etiqueta de cierre -->
+
+    <h2>león en la cima</h2>
+    <p>Texto un poco más</p>
+    <!-- este texto es un comentario, 
+        no aparece en explorador
+                 
+                CTRL + }                
+        (clic derecho, inspeccionar) ←  dentro de navegador         -->
+
+
+
+                                <!--       >>> Span         -->
+                                                                                <!-- 
+                Es para identificar un texto o una etiqueta 
+            dentro de otras etiquetas; y así referenciarlas
+            o darles un estilo.
+                                                                                -->
+
+    <p>
+        Este texto es <span style="color:blue"> mucho más largo </span>
+        es para mostrar <br>
+        la etiqueta de span!
+    </p>
+                <!-- con un poco de CSS -->
+
+
+                                <!--       >>> Enlaces/Links/Hipervínculos        -->
+
+    <a target="_blank" href="https://www.google.com">Ir a google</a>            <!-- 
+     a:   anchor                     
+                       href: indicar url
+       target: para abrir en una nueva pestaña  
+                                                                                -->
+        
+<br>                                               
+                                <!--       >>> Imágenes        -->
+                    
+    <img src="img/3.jpg" width="400" />
+        <!-- <img src="https://www.rutadelaimagen.com/img.png"> -->
+
+        <!-- con un solo width o un solo height basta 
+        para que una imagen se vean igual y cuadrada -->
+
+
+
+
+
+        
+
+<br>
+                                        <!--       >>> Tablas              -->
+     <!-- tr es 'table row' -->
+     <!-- td es para definir elementos estándares que se
+          encuentran dentro de nuestras tablas -->
+     <table style="width: 500px; margin-left:auto; margin-right:auto; text-align: center;">
+        <thead>
+             <tr>                     <!-- thead sirve para agrupar elementos
+                                      que se encuentran a nuestras cabeceras -->
+                  <th>Producto</th>
+                  <th>Precio</th>
+             </tr>
+        </thead>
+       <tbody>
+        <tr>
+             <td>Laptop Rog Strix</td>
+             <td>Gratis</td>
+        </tr>
+        <tr>
+             <td>Laptop Asus 2 núcleos</td>
+             <td>19,90$</td>
+        </tr>
+        <tr>
+             <td>Laptop vieja</td>
+             <td>29,90$</td>
+        </tr>
+       </tbody>
+       <tfoot>
+             <td></td>
+             <td>Total: 49.80$</td>
+       </tfoot>
+   </table>
+
+
+   
+                              <!--       >>> Listas              -->
+   <!-- ul es lista no ordenada -->
+   <!-- li es 'list item' -->
+<div style="display: inline-block;">
+   <ul>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+   </ul>
+   <!-- ol es lista ordenada -->
+   <ol>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+   </ol>
+   <ol>
+        <li value="50">Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+        <li>
+             <ol>
+                  <li style="list-style-type: lower-roman;">sub elemento 1</li>
+                 <!-- style="list-style-type: lower-alpha;" -->
+                  <li style="list-style-type: lower-roman;">sub elemento 2</li>
+                  <li style="list-style-type: lower-roman;">sub elemento 3</li>
+             </ol>
+        </li>
+   </ol>
+</div>
+
+                              <!--       >>> Formularios         -->
+
+  <form action="/formulario" method="get" target="_blank">
+  <!-- "action" debe contener una ruta 
+      dentro de nuestro servidor;  ("/formulario.php")
+      o dentro de una aplicación;
+      o dentro de una web -->
+                        <!-- method="get"
+                             method="post" 
+                          métodos para enviar datos al servidor  
+                          ambos métodos no son del todo seguros,
+                          un poco más "post" que "get"
+                          lo mejor son: 
+              / Certificados que se encarguen de encriptar todas nuestras conexiones / -->
+
+      <label for="nombre">Nombre</label>
+      <input value="León" type="text" id="nombre" name="nombre" placeholder="León feliz..." />        
+                           <!--type="submit"
+                               type="email"
+                               type="password"
+                               type="radio"
+                               type="checkbox"
+                               type="file"
+                               type="text"-->
+                       <!-- la propiedad de input lleva por defecto ' type="text" ' -->
+
+                               <!-- la propiedad de "nombre" SIEMPRE es necesario en <input> -->
+              
+ <!--      ' value="chanchito" '  es un valor por defecto  -->
+
+      <br>
+      <label for="nombre">Apellido</label>
+      <input value="feliz" type="text" id="apellido" name="apellido" placeholder="León triste..." />
+ <!--      ' value="feliz" '  es un valor por defecto  -->
+      <br>
+      <label for="comentario">Comentario</label>
+      <textarea cols="50" rows="10" id="comentario" placeholder ="ingrese comentario" 
+                name="comentario">este es un valor por defecto</textarea>
+      <!-- la etiqueta de "textarea" no utiliza la propiedad de 'value'
+           para obtener valores por defecto; sino se usa el texto entre las etiquetas -->
+      <br>
+
+
+      
+                              <!--       >>> Etiquetas button         -->         <!--
+                                  
+   las ventajas de las etiquetas button es que puedes poner etiquetas dentro       -->
+
+
+      <button type="button"><img src="img/3.jpg" width="50" />Tipo botón</button>                                  <!-- 
+      <input  />              →  <button> es más personalizable que "<input />" con tipo submit  --> 
+         <!-- type="button"   →  se tiene que especificar con JavaScript
+              type="reset"
+              type="submit"-->
+       <button type="reset">Tipo reset</button>
+       <button target="_blank"  type="submit">Tipo submit</button>
+  <!-- <button> tiene por defecto "submit" -->
+
+     <p>&copy; Memo Sainz Copyright 2023 <a target="_blank" href="https://github.com/MemoSainz">¡Visita my Github!</a></p>
+       
+
+
+</body>
+</html>
