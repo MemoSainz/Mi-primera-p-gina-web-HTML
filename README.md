@@ -3,4 +3,4 @@ Mi first web page (just Spanish) HTML
 
 This is just available in Spanish, still is silly and easy to understand.
 
-Netlify: https://mi-primera-pagina-web-memo.netlify.app/
+Netlify: https://mi-primer-blog-memo.netlify.app/
